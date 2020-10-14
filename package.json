@@ -58,6 +58,8 @@
   },
   "dependencies": {
     "@babel/polyfill": "^7.11.5",
-    "core-js": "^3.6.5"
+    "britecharts": "^2.17.1",
+    "core-js": "^3.6.5",
+    "d3-selection": "^2.0.0"
   }
 }

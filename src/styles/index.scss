@@ -6,20 +6,19 @@ body {
   margin: 0;
 }
 
-
 .card--chart {
   overflow: hidden;
   border-width: 1px;
+  margin: 0 auto;
   margin-bottom: 20px;
   background-color: white;
-  margin: 0 auto;
   text-align: center;
   min-height: 22vw;
-
 }
+
 @media (min-width: 1400px) {
   .card--chart {
-      min-height: 16vw;
+    min-height: 16vw;
   }
 }
 

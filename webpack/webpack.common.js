@@ -31,6 +31,10 @@ module.exports = {
       filename: 'es-modules.html',
       template: Path.resolve(__dirname, '../src/es-modules.html'),
     }),
+    new HtmlWebpackPlugin({
+      filename: 'cjs-modules.html',
+      template: Path.resolve(__dirname, '../src/cjs-modules.html'),
+    }),
   ],
   resolve: {
     alias: {
