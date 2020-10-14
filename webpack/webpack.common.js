@@ -6,6 +6,8 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
   entry: {
     app: Path.resolve(__dirname, '../src/scripts/index.js'),
+    esModules: Path.resolve(__dirname, '../src/scripts/esmodules.js'),
+    cjsModules: Path.resolve(__dirname, '../src/scripts/cjsmodules.js'),
   },
   output: {
     path: Path.join(__dirname, '../build'),
@@ -26,14 +28,17 @@ module.exports = {
     new HtmlWebpackPlugin({
       filename: 'cdn.html',
       template: Path.resolve(__dirname, '../src/cdn.html'),
+      excludeChunks: [ 'cjsModules', 'esModules' ]
     }),
     new HtmlWebpackPlugin({
       filename: 'es-modules.html',
       template: Path.resolve(__dirname, '../src/es-modules.html'),
+      excludeChunks: [ 'cjsModules' ]
     }),
     new HtmlWebpackPlugin({
       filename: 'cjs-modules.html',
       template: Path.resolve(__dirname, '../src/cjs-modules.html'),
+      excludeChunks: [ 'esModules' ]
     }),
   ],
   resolve: {

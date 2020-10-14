@@ -60,17 +60,40 @@
   </div>
   <main class="container">
     <div class="row">
-      <div class="col-md-4">
+      <div class="col-md-6">
         <h2>ES Modules</h2>
-        <a href="es-modules.html">Example</a>
+        <code>
+          import britecharts from 'britecharts'; <br />
+          //or <br />
+          import bar from 'britecharts/dist/umd/bar.min';
+        </code>
+        <div style="margin-top: 20px;">
+          <a href="es-modules.html">Example</a>
+        </div>
       </div>
-      <div class="col-md-4">
+      <div class="col-md-6">
         <h2>CDN</h2>
-        <a href="/cdn.html">Example</a>
+        <code>
+          const container = d3.select('.bar-container'); <br />
+          const barChart = britecharts.bar();
+        </code>
+        <div style="margin-top: 20px;">
+          <a href="/cdn.html">Example</a>
+        </div>
       </div>
-      <div class="col-md-4">
+    </div>
+    <div class="row">
+      <div class="col-md-6">
         <h2>CommonJS Modules</h2>
-        <a href="cjs-modules.html">Example</a>
+        <code>
+          const selection = require('d3-selection');<br />
+          const britecharts = require('britecharts');<br />
+          //or <br />
+          const bar = require('britecharts/dist/umd/bar.min');
+        </code>
+        <div style="margin-top: 20px;">
+          <a href="cjs-modules.html">Example</a>
+        </div>
       </div>
     </div>
     <div class="row">
