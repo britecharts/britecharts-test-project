@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Britecharts Test Project</title>
+
+    <meta name="description" content="" />
+    <meta name="keywords" content="Britecharts" />
+
+    <!-- Disable tap highlight on IE -->
+    <meta name="msapplication-tap-highlight" content="no">
+
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="Britecharts">
+    <link rel="icon" sizes="192x192" href="/public/img/icons/chrome-touch-icon-192x192.png">
+
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#009FA1">
+    <meta name="apple-mobile-web-app-title" content="Britecharts">
+    <link rel="apple-touch-icon" sizes="180x180" href="/public/img/icons/apple-touch-icon.png">
+
+    <!-- MacOS -->
+    <link rel="mask-icon" href="/public/img/icons/safari-pinned-tab.svg" color="#5bbad5">
+
+    <!-- Color the status bar on mobile devices -->
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="/public/img/icons/favicon.ico">
+    <link rel="icon" type="image/png" href="/public/img/icons/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/public/img/icons/favicon-16x16.png" sizes="16x16">
+
+    <!--[if lt IE 9]>
+        <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/britecharts/dist/css/britecharts.min.css"
+        type="text/css" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-selection/1.2.0/d3-selection.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/britecharts@2.10.0/dist/umd/bar.min.js" type="text/javascript"></script>
+</head>
+
+<body>
+    <div class="navbar">
+        <div class="container">
+            <a class="ribbon" href="https://github.com/britecharts/britecharts"
+                title="Check this project in github"><svg xmlns="http://www.w3.org/2000/svg" width="60" height="60"
+                    viewBox="0 0 250 250" fill="#fff" style="position: absolute; top: 0; right: 0;">
+                    <path d="M0 0l115 115h15l12 27 108 108V0z" fill="#000" />
+                    <path class="octo-arm"
+                        d="M128 109c-15-9-9-19-9-19 3-7 2-11 2-11-1-7 3-2 3-2 4 5 2 11 2 11-3 10 5 15 9 16"
+                        style="-webkit-transform-origin: 130px 106px; transform-origin: 130px 106px;" />
+                    <path class="octo-body"
+                        d="M115 115s4 2 5 0l14-14c3-2 6-3 8-3-8-11-15-24 2-41 5-5 10-7 16-7 1-2 3-7 12-11 0 0 5 3 7 16 4 2 8 5 12 9s7 8 9 12c14 3 17 7 17 7-4 8-9 11-11 11 0 6-2 11-7 16-16 16-30 10-41 2 0 3-1 7-5 11l-12 11c-1 1 1 5 1 5z" />
+                    </svg></a>
+            <div class="navbar-header">
+                <a class="navbar-brand" href="index.html"><img class="branding-logo"
+                        src="/public/img/britecharts-logo.svg"
+                        alt="Britecharts - D3.js based charting library of reusable components" /></a>
+            </div>
+        </div>
+    </div>
+    <main class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <h2>Bar Chart</h2>
+                <div class="card--chart">
+                    <div class="bar-container"></div>
+                </div>
+            </div>
+            <div class="col-md-4">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <h2>CDN</h2>
+                <a href="/cdn.html">Example</a>
+            </div>
+            <div class="col-md-4">
+              <h2>CommonJS Modules</h2>
+              <a href="common-js.html">Example</a>
+            </div>
+          </div>
+    </main>
+    <script>
+        const container = d3.select('.bar-container');
+        const barChart = britecharts.bar();
+        const barData = [
+            { name: 'Luminous', value: 2 },
+            { name: 'Glittering', value: 5 },
+            { name: 'Intense', value: 4 },
+            { name: 'Radiant', value: 3 }
+        ];
+
+        barChart
+            .margin({left: 100})
+            .isHorizontal(true)
+            .height(400)
+            .width(600);
+
+        container.datum(barData).call(barChart);
+    </script>
+</body>
+
+</html>

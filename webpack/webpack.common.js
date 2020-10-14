@@ -23,6 +23,14 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: Path.resolve(__dirname, '../src/index.html'),
     }),
+    new HtmlWebpackPlugin({
+      filename: 'cdn.html',
+      template: Path.resolve(__dirname, '../src/cdn.html'),
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'es-modules.html',
+      template: Path.resolve(__dirname, '../src/es-modules.html'),
+    }),
   ],
   resolve: {
     alias: {
