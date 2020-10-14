@@ -4,9 +4,9 @@
 
 ### Usage
 Check different examples of how to use Britecharts:
-* CDN Example - /src/cdn.html
-* ESModules Example - /src/scripts/index.js
-* CommonJS Example - /src/scripts/index.js
+* CDN Example - [/src/cdn.html](https://github.com/britecharts/britecharts-test-project/blob/main/src/cdn.html)
+* ESModules Example - [/src/scripts/index.js](https://github.com/britecharts/britecharts-test-project/blob/main/src/scripts/index.js)
+* CommonJS Example - [/src/scripts/index.js](https://github.com/britecharts/britecharts-test-project/blob/main/src/scripts/index.js)
 
 ### Installation
 ```
