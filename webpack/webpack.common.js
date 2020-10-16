@@ -7,7 +7,9 @@ module.exports = {
   entry: {
     app: Path.resolve(__dirname, '../src/scripts/index.js'),
     esModules: Path.resolve(__dirname, '../src/scripts/esmodules.js'),
+    esModulesBundle: Path.resolve(__dirname, '../src/scripts/esmodules-bundle.js'),
     cjsModules: Path.resolve(__dirname, '../src/scripts/cjsmodules.js'),
+    cjsModulesBundle: Path.resolve(__dirname, '../src/scripts/cjsmodules-bundle.js'),
   },
   output: {
     path: Path.join(__dirname, '../build'),
@@ -28,17 +30,27 @@ module.exports = {
     new HtmlWebpackPlugin({
       filename: 'cdn.html',
       template: Path.resolve(__dirname, '../src/cdn.html'),
-      excludeChunks: [ 'cjsModules', 'esModules' ]
+      excludeChunks: [ 'cjsModules', 'esModules', 'esModulesBundle', 'cjsModulesBundle' ]
     }),
     new HtmlWebpackPlugin({
       filename: 'es-modules.html',
       template: Path.resolve(__dirname, '../src/es-modules.html'),
-      excludeChunks: [ 'cjsModules' ]
+      excludeChunks: [ 'cjsModules', 'cjsModulesBundle', 'esModulesBundle' ]
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'es-modules-bundle.html',
+      template: Path.resolve(__dirname, '../src/es-modules-bundle.html'),
+      excludeChunks: [ 'cjsModules', 'cjsModulesBundle', 'esModules' ]
     }),
     new HtmlWebpackPlugin({
       filename: 'cjs-modules.html',
       template: Path.resolve(__dirname, '../src/cjs-modules.html'),
-      excludeChunks: [ 'esModules' ]
+      excludeChunks: [ 'esModules', 'esModulesBundle', 'cjsModulesBundle' ]
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'cjs-modules-bundle.html',
+      template: Path.resolve(__dirname, '../src/cjs-modules-bundle.html'),
+      excludeChunks: [ 'esModules', 'esModulesBundle', 'cjsModules' ]
     }),
   ],
   resolve: {

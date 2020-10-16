@@ -1,15 +1,14 @@
 // Using CommonJS modules
 const selection = require('d3-selection');
-const bar = require('britecharts/dist/umd/bar.min');
-
+const britecharts = require('britecharts');
 
 // CommonJS Page
-const isCommonJS = selection.select('.cjs-modules').size() === 1;
+const isCommonJS = selection.select('.cjs-modules-bundle').size() === 1;
 
 if(isCommonJS) {
-  console.log('isCommonJS');
+  console.log('isCommonJS Bundle');
   const container = selection.select('.bar-container');
-  const barChart = bar();
+  const barChart = britecharts.bar();
   const barData = [
       { name: 'Luminous', value: 2 },
       { name: 'Glittering', value: 5 },

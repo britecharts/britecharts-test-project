@@ -41,12 +41,9 @@
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/britecharts/dist/css/britecharts.min.css"
         type="text/css" />
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-selection/1.2.0/d3-selection.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/britecharts@2.10.0/dist/umd/bar.min.js" type="text/javascript"></script>
 </head>
 
-<body>
+<body class="es-modules-bundle">
     <div class="navbar">
         <div class="container">
             <a class="ribbon" href="https://github.com/britecharts/britecharts"
@@ -79,8 +76,8 @@
         </div>
         <div class="row">
             <div class="col-md-4">
-              <h2>ES Modules</h2>
-              <a href="es-modules.html">Example</a>
+                <h2>CDN</h2>
+                <a href="/cdn.html">Example</a>
             </div>
             <div class="col-md-4">
               <h2>CommonJS Modules</h2>
@@ -90,26 +87,12 @@
                 <h2>CommonJS Modules with Bundle</h2>
                 <a href="cjs-modules-bundle.html">Example</a>
             </div>
-        </div>
+            <div class="col-md-4">
+                <h2>ES Modules</h2>
+                <a href="es-modules.html">Example</a>
+            </div>
+          </div>
     </main>
-    <script>
-        const container = d3.select('.bar-container');
-        const barChart = britecharts.bar();
-        const barData = [
-            { name: 'Luminous', value: 2 },
-            { name: 'Glittering', value: 5 },
-            { name: 'Intense', value: 4 },
-            { name: 'Radiant', value: 3 }
-        ];
-
-        barChart
-            .margin({left: 100})
-            .isHorizontal(true)
-            .height(400)
-            .width(600);
-
-        container.datum(barData).call(barChart);
-    </script>
 </body>
 
 </html>

@@ -63,14 +63,45 @@
       <div class="col-md-6">
         <h2>ES Modules</h2>
         <code>
-          import britecharts from 'britecharts'; <br />
-          //or <br />
           import bar from 'britecharts/dist/umd/bar.min';
         </code>
         <div style="margin-top: 20px;">
           <a href="es-modules.html">Example</a>
         </div>
       </div>
+      <div class="col-md-6">
+        <h2>ES Modules with Bundle</h2>
+        <code>
+          import {bar} from 'britecharts'; <br />
+        </code>
+        <div style="margin-top: 20px;">
+          <a href="es-modules-bundle.html">Example</a>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <h2>CommonJS Modules</h2>
+        <code>
+          const selection = require('d3-selection');<br />
+          const bar = require('britecharts/dist/umd/bar.min');
+        </code>
+        <div style="margin-top: 20px;">
+          <a href="cjs-modules.html">Example</a>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <h2>CommonJS Modules with Bundle</h2>
+        <code>
+          const selection = require('d3-selection');<br />
+          const britecharts = require('britecharts');<br />
+        </code>
+        <div style="margin-top: 20px;">
+          <a href="cjs-modules-bundle.html">Example</a>
+        </div>
+      </div>
+    </div>
+    <div class="row">
       <div class="col-md-6">
         <h2>CDN</h2>
         <code>
@@ -80,24 +111,6 @@
         <div style="margin-top: 20px;">
           <a href="/cdn.html">Example</a>
         </div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-6">
-        <h2>CommonJS Modules</h2>
-        <code>
-          const selection = require('d3-selection');<br />
-          const britecharts = require('britecharts');<br />
-          //or <br />
-          const bar = require('britecharts/dist/umd/bar.min');
-        </code>
-        <div style="margin-top: 20px;">
-          <a href="cjs-modules.html">Example</a>
-        </div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-12">
       </div>
     </div>
   </main>
