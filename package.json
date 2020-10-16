@@ -1,5 +1,5 @@
 {
-  "name": "webpack-starter",
+  "name": "BritechartsTestProject",
   "version": "1.0.0",
   "description": "A light foundation for your next frontend project based on webpack.",
   "scripts": {
@@ -58,7 +58,7 @@
   },
   "dependencies": {
     "@babel/polyfill": "^7.11.5",
-    "britecharts": "3.0.0-alpha-2.2",
+    "britecharts": "^2.17.1",
     "core-js": "^3.6.5",
     "d3-selection": "^2.0.0"
   }
