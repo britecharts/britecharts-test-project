@@ -15,13 +15,13 @@ if(isESModules) {
       { name: 'Intense', value: 4 },
       { name: 'Radiant', value: 3 }
   ];
-  
+
   barChart
       .margin({left: 100})
       .isHorizontal(true)
       .height(400)
       .width(600);
-  
+
   container.datum(barData).call(barChart);
 }
 
