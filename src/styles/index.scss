@@ -35,7 +35,7 @@ body {
 
 .navbar::before,
 .navbar::after {
-  content: " ";
+  content: ' ';
   display: table;
 }
 
@@ -51,7 +51,7 @@ body {
 
 .navbar-header::before,
 .navbar-header::after {
-  content: " ";
+  content: ' ';
   display: table;
 }
 
@@ -123,7 +123,7 @@ img.branding-logo {
 
 .container::before,
 .container::after {
-  content: " ";
+  content: ' ';
   display: table;
 }
 
@@ -158,7 +158,7 @@ img.branding-logo {
 
 .container-fluid::before,
 .container-fluid::after {
-  content: " ";
+  content: ' ';
   display: table;
 }
 
@@ -173,7 +173,7 @@ img.branding-logo {
 
 .row::before,
 .row::after {
-  content: " ";
+  content: ' ';
   display: table;
 }
 

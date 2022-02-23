@@ -58,8 +58,46 @@
   },
   "dependencies": {
     "@babel/polyfill": "^7.11.5",
-    "britecharts": "^3.0.0-alpha-2.3",
+    "britecharts": "^3.0.0-alpha-6.1.4",
     "core-js": "^3.6.5",
     "d3-selection": "^1.4.1"
+  },
+  "prettier": {
+    "endOfLine": "lf",
+    "tabWidth": 4,
+    "semi": true,
+    "bracketSpacing": true,
+    "singleQuote": true,
+    "arrowParens": "always",
+    "overrides": [
+      {
+        "files": "*.md",
+        "options": {
+          "printWidth": 70,
+          "useTabs": false,
+          "trailingComma": "none",
+          "arrowParens": "avoid",
+          "proseWrap": "never"
+        }
+      },
+      {
+        "files": "*.json",
+        "options": {
+          "printWidth": 70,
+          "useTabs": false,
+          "trailingComma": "none",
+          "tabWidth": 2
+        }
+      },
+      {
+        "files": "*.scss",
+        "options": {
+          "printWidth": 70,
+          "useTabs": false,
+          "trailingComma": "none",
+          "tabWidth": 2
+        }
+      }
+    ]
   }
 }
